@@ -18,7 +18,7 @@ class TranspositionCipher:
         for symbol in text:
             decrypted_text[col] += symbol
             col += 1
-            if col == key or (col == key - 1 and row == len(text) % key):
+            if col == key or (col == key - 1 and row >= len(text) % key):
                 col = 0
                 row += 1
         
